@@ -3,9 +3,14 @@ Recently Viewed
 
 ### Installation
     
-    script/extension install git://github.com/romul/spree-recently-viewed.git
+    in the Gemfile add:
+
+    gem 'spree_recently_viewed', :git => 'git://github.com/kennyadsl/spree_recently_viewed.git'
     
+    for i18n add a file named {language}_spree_recently_viewed.yml in your /config/locales/ directory.
+
 ### Usage
 
-    <%= stylesheet_link_tag "/recently/viewed/products.css?product_id=#{@product.id}" %>
+    in the view file you prefer add the following line:
 
+    <%= render 'shared/recently_viewed_products' %>
