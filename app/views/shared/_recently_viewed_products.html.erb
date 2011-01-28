@@ -1,8 +1,10 @@
-<% if get_recently_viewed_products.any? %>
+<% if get_recently_viewed_products.any? && !(get_recently_viewed_products.length == 1 && get_recently_viewed_products.first.id == @product.id) %>
   <h3><%= t :recently_viewed_products %></h3>
   <ul>
     <% get_recently_viewed_products.each do |p| %>
-      <li><%= link_to p.name, p %></li>
+      <% if p.id != @product.id %>
+        <li><%= link_to p.name, p %></li>
+      <% end %>
     <% end -%>
   </ul>
 <% end %>
