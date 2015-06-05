@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Adds recently viewed products to Spree'
   #s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
+  s.author      = 'Nebulab'
 
   s.files        = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*']
   s.require_path = 'lib'
